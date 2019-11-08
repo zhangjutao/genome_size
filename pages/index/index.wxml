@@ -1,0 +1,65 @@
+<view class='container' style="{{helpTip?'height:100%;overflow:hidden':''}}">
+  	<image bindtap='jumpHelp' class='helpImg' src="/images/help.png"></image>
+
+  <image class='logo' src='/images/logo.png'></image>
+  <view>
+    <view wx:if="{{changeSearch == '1'}}">
+      <my-search bind:searchList="searchList" tips="请输入物种中文/英文/拉丁名" searchType='1' />
+    </view>
+    <view wx:elif="{{changeSearch == '2'}}">
+      <my-search bind:searchList="searchList" tips="请输入物种中文/英文/拉丁名" searchType='2' />
+    </view>
+    <view wx:else>
+      <my-search bind:searchList="searchList" tips="请输入物种拉丁名" searchType='3' />
+    </view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio">
+        <radio value="1" checked="{{changeSearch == '1'}}" /> 依据文献数据
+      </label>
+      <label class="radio">
+        <radio value="2" checked="{{changeSearch == '2'}}" /> 依据NCBI数据
+      </label>
+      <label class="radio">
+        <radio value="3" checked="{{changeSearch == '3'}}" /> 依据C值数据
+      </label>
+    </radio-group>
+    <text class='total' wx:if="{{total}}">(共有 {{total}} 条数据)</text>
+    <text wx:if="{{total > limitNum}}" class='totalTip'>注意:由于筛选结果过大，暂展示不全，请进一步筛选！</text>
+    <view class="container-searchList" wx:if="{{searchList.length}}">
+      <block wx:for="{{searchList}}" wx:key="index">
+        <my-searchList searchList="{{item}}" searchType="{{changeSearch}}" bind:closeOther="closeOther" index="{{index}}" />
+      </block>
+    </view>
+    <text class='emple' wx:if="{{showEmple}}">无匹配</text>
+    <my-help wx:if="{{helpTip}}" class="help" bind:close = "close">
+    </my-help>
+    <view wx:if="{{helpTip}}" class='helpInfo'>
+      <view class='help-box'>
+        <view class='help-header'>
+          <text>使用说明</text>
+					<view  class='closeImg' bind:tap="close">
+          	<image src='/images/close.png'></image>
+					</view>
+        </view>
+        <view class='help-container'>
+          <text selectable="true">“动植物基因组大小查询”小程序为用户提供了三种查询方式：</text>
+          <text selectable="true">1、依据文献数据</text>
+          <text selectable="true" class='help-sj'>我们收录了2000至2018年发表的600余篇动植物基因组文献，整理了文献中描述的物种中英文名及拉丁名，基因组组装大小及期刊信息，后续我们将持续更新。
+</text>
+          <text selectable="true">2、依据NCBI数据</text>
+          <text selectable="true" class='help-sj'>我们从NCBI数据库下载了约8000条真核生物基因组组装信息，整理了基因组大小、N50、GC含量等信息，并对部分物种的拉丁名进行了翻译。</text>
+          <text selectable="true">3、依据c值数据</text>
+          <text selectable="true" class='help-sj'>c值数据收录了来自于公共数据库（animal genome size, Plant DNA C-values Database）的c值数据，并将c值（pg）转换成基因组大小（Mb）。</text>
+          <text selectable="true">4、检索说明</text>
+          <text selectable="true" class='help-sj'>（1）依据文献和NCBI数据的检索可支持物种中英文及拉丁名，依据c值数据的检索只支持拉丁名搜索。</text>
+          <text selectable="true" class='help-sj'>（2）依据文献数据和NCBI数据的结果展示页面，点击每一条搜索结果可展开查看详情。</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+  <view class="gotopContainer" wx:if="{{cangotop}}" catchtap="goTop">
+    <text class='goTop'></text>
+  </view>
+  <my-footer />
+</view>

@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "动植物基因组大小查询",
+    "navigationStyle": "default",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark",
+    "backgroundColorTop": "#ffffff",
+    "backgroundColorBottom": "#ffffff",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  },
+  "sitemapLocation": "sitemap.json"
+}

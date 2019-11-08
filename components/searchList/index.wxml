@@ -1,0 +1,22 @@
+<view class='container'>
+	<text bindtap='isShow'  selectable="true" class='container-off' wx:if="{{searchType == '1'}}">{{searchList.geneNameCn}} ： {{searchList.geneSize}}</text>
+	<text bindtap='isShow'  selectable="true"  class='container-off' wx:elif="{{searchType == '2'}}">{{searchList.geneNameLatin}} ： {{searchList.geneSize}}</text>
+	<text wx:else  selectable="true"  class='container-off'>{{searchList.geneNameLatin}} ： {{searchList.geneSize}}</text>
+	<view wx:if="{{searchList.flag}}" class='other'>
+		<view wx:if="{{searchType == '1'}}">
+			<text selectable="true">Common Name ： {{searchList.commonName}}</text>
+			<text selectable="true">拉丁名 ： {{searchList.geneNameLatin}}</text>
+			<text selectable="true">发表期刊 ： {{searchList.publication}}</text>
+			<text selectable="true">发表时间 ： {{searchList.publishTime}}</text>
+		</view>
+		<view wx:if="{{searchType == '2'}}">
+			<text selectable="true">Common Name ： {{searchList.commonName}}</text>
+			<text selectable="true">Assembly NO. ： {{searchList.assembly}}</text>
+			<text selectable="true">Level ： {{searchList.level}}</text>
+			<text selectable="true">Contig N50 ： {{searchList.contigN50}}</text>
+			<text selectable="true">Scaffold N50 ： {{searchList.scaffoldN50}}</text>
+			<text selectable="true">GC% ： {{searchList.gc}}</text>
+			<text selectable="true">Release Date ： {{searchList.publishTime}}</text>
+		</view>
+	</view>
+</view>

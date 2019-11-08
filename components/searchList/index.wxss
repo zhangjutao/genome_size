@@ -1,0 +1,20 @@
+.container{
+	font-size: 33rpx;
+	background: #44e3f8;
+	border: 1px solid #44e3f8;
+	margin: 0 10rpx;
+	padding: 5rpx 10rpx;
+	border-radius: 20rpx;
+}
+.other{
+	margin-top: 20rpx;
+	color: #333;
+	font-size: 30rpx; 
+}
+.other text{
+	display: block;
+	margin-bottom: 10rpx;
+}
+.container-off{
+	display: block
+}

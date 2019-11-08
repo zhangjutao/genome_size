@@ -1,0 +1,26 @@
+.container{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 120rpx;
+	padding: 0 10rpx;
+}
+.search-input{
+	padding-left: 10rpx;
+	width: 550rpx;
+	border: 1px solid #25c532;
+	border-right-width:0px;
+	height: 100rpx;
+	text-align:center;
+}
+.search-btn{
+	width: 200rpx;
+	height: 103rpx;
+	line-height: 103rpx;
+	text-align: center;
+	background: #25c532;
+  border-bottom: 1px solid #25c532;
+	color: #fff;
+	position: relative;
+	left: -1px;
+}

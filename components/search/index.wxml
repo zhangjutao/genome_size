@@ -1,0 +1,8 @@
+<view class="container">
+	<view>
+		<input type="text" class="search-input" placeholder="{{tips}}" value="{{searchVal}}" bindinput='searchInput' bindconfirm="searchClick" placeholder-class="placeholderClass" />
+	</view>
+	<view  class="search-btn" bindtap="searchClick">
+		<text>搜索</text>
+	</view>
+</view>

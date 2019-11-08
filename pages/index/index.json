@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+		"my-search": "/components/search/index",
+		"my-searchList": "/components/searchList/index",
+		"my-footer": "/components/footer/index",
+		"my-help": "/components/help/index"
+	}
+}

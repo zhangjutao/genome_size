@@ -1,0 +1,117 @@
+.container{
+	width: 100%;
+	height:100%;
+}
+my-searchList{
+	margin-bottom: 30rpx;
+	display:block;
+}
+.gotopContainer{
+	position: fixed;
+	width: 100rpx;
+	height: 100rpx;
+	bottom: 100rpx;
+	right: 50rpx;
+	border:1px solid #f2f2f2;
+	border-radius: 50%;
+	background: #fff;
+}
+.goTop{
+  width:0;
+	height:0;
+	border-width:0 30rpx 30rpx;
+	border-style:solid;
+	border-color:transparent transparent #3385ff;
+	position: absolute;
+	top: 33rpx;
+	left: 20rpx;
+}
+.logo{
+	width: 150rpx;
+	height: 150rpx;
+	margin-left: 200rpx;
+}
+.helpImg{
+	width: 50rpx;
+	height: 50rpx;
+	margin-left: 26rpx;
+}
+.container-searchList{
+	margin-top: 20rpx;
+	padding-bottom:80rpx;
+}
+.emple{
+	margin-left: 200rpx;
+}
+.radio-group{
+	font-size: 25rpx;
+	margin-top: 10rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+.radio-group label{
+	padding: 10rpx 0;
+}
+.radio-group radio{
+	transform:scale(0.7);
+}
+my-footer{
+	position: fixed;
+	bottom: 0;
+}
+.total{
+	display: block;
+	text-align: center;
+	font-size: 30rpx;
+	color: #666;
+}
+.totalTip{
+	background: yellow;
+	display: block;
+	text-align: center;
+	color:red;
+	font-size: 28rpx;
+}
+.helpInfo{
+	position: fixed;
+	left: 8%;
+	top: 10%;
+	width: 82%;
+	z-index: 100; 
+	background: #fff;
+	border-radius: 50rpx;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.help-box{
+	padding: 20rpx 40rpx;
+	position: relative;
+}
+.help-header{
+	text-align: center;
+	margin-bottom: 20rpx;
+	font-size: 45rpx;
+}
+.helpInfo text{
+	display: block;
+}
+.help-container{
+	font-size: 28rpx;
+}
+.closeImg{
+	text-align: right;
+	position:absolute;
+	right:0;
+	top:0;
+	width:250rpx;
+	height:100rpx;
+}
+.closeImg image{
+	position: relative;
+	top: 20rpx;
+	right: 20rpx;
+}
+.help-sj{
+	text-indent: 56rpx;
+}
